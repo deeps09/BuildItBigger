@@ -6,7 +6,6 @@ public class JokeProvider {
 
     private String[] jokes =
             {
-                    "",
                     "Do not be racist; be like Mario. He's an Italian plumber, who was made by the Japanese, speaks English, looks like a Mexican, jumps like a black man, and grabs coins like a Jew!",
                     "Yo momma is so fat, when she sat on an iPod, she made the iPad!",
                     "Q: Why couldn't the blonde add 10 + 5 on a calculator? \n" +
