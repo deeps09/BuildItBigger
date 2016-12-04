@@ -61,20 +61,20 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-    public void startJokeActivity (String joke){
+    public void startJokeActivity(String joke) {
         Intent intent = new Intent(this, DisplayJokeActivity.class);
         intent.putExtra("joke", joke);
         startActivity(intent);
     }
 
 
-    class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> {
+    public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> {
         private MyApi myApiService = null;
         private Context context;
 
         @Override
         protected String doInBackground(Pair<Context, String>... params) {
-            if(myApiService == null) {  // Only do this once
+            if (myApiService == null) {  // Only do this once
                 MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(),
                         new AndroidJsonFactory(), null)
                         // options for running against local devappserver
