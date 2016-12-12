@@ -46,6 +46,7 @@ public class MainActivityFragment extends Fragment {
                 requestNewInterstitial();
 
                 // loading joke activity
+                MainActivityFragment.mProgressbar.setVisibility(View.VISIBLE);
                 EndpointsAsyncTask endpointsAsyncTask = new EndpointsAsyncTask();
                 endpointsAsyncTask.execute(new Pair<Context, String>(getActivity(), "joke"));
             }
