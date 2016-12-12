@@ -37,11 +37,12 @@ public class BackendApiTest {
         String joke = null;
         endpointsAsyncTask.execute(new Pair<Context, String>(InstrumentationRegistry.getInstrumentation().getTargetContext(), "test"));
         try {
-            joke = endpointsAsyncTask.get(20, TimeUnit.SECONDS);
+            joke = endpointsAsyncTask.get(60, TimeUnit.SECONDS);
             Log.d(TAG, "testApi: " + joke);
         } catch (InterruptedException | ExecutionException|TimeoutException e) {
             Log.d(TAG, "testApi: ", e);
         }
+        Log.d(TAG, "testApi: "+ joke);
         Assert.assertNotNull(joke);
     }
 }
