@@ -32,7 +32,7 @@ public class MainActivityFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_main, container, false);
 
         mProgressbar = (ProgressBar) root.findViewById(R.id.progressBar);
-        //AdView mAdView = (AdView) root.findViewById(R.id.adView);
+        AdView mAdView = (AdView) root.findViewById(R.id.adView);
         // Create an ad request. Check logcat output for the hashed device ID to
         // get test ads on a physical device. e.g.
         // "Use AdRequest.Builder.addTestDevice("ABCDEF012345") to get test ads on this device."
@@ -53,10 +53,10 @@ public class MainActivityFragment extends Fragment {
         });
         requestNewInterstitial();
 
-        /*AdRequest adRequest = new AdRequest.Builder()
+        AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 .build();
-        mAdView.loadAd(adRequest);*/
+        mAdView.loadAd(adRequest);
         return root;
     }
 
